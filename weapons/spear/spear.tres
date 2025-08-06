@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Weapons" load_steps=3 format=3 uid="uid://qjpljbj72yxw"]
+
+[ext_resource type="Script" uid="uid://d3m50l03arhkt" path="res://meshes/weapons.gd" id="1_k6ge6"]
+[ext_resource type="Texture2D" uid="uid://dmgh7w7mofb3" path="res://weapons/spear/placeholder_spear.png" id="2_icyn1"]
+
+[resource]
+script = ExtResource("1_k6ge6")
+name = &"Spear"
+position = Vector2(45.125, 0)
+sprite = ExtResource("2_icyn1")
+damage_amount = 5.0
+weapon_cooldown = 1.0
+metadata/_custom_type_script = "uid://d3m50l03arhkt"

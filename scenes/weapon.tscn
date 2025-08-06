@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://deiavvtks841r"]
+
+[ext_resource type="Script" uid="uid://bkjglqp0xrdf2" path="res://init_weapon.gd" id="1_xasec"]
+[ext_resource type="Resource" uid="uid://qjpljbj72yxw" path="res://weapons/spear/spear.tres" id="2_uxn4k"]
+
+[node name="Weapon" type="Node2D"]
+script = ExtResource("1_xasec")
+WEAPON_TYPE = ExtResource("2_uxn4k")
+
+[node name="WeaponSprite" type="Sprite2D" parent="."]

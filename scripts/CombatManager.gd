@@ -1,4 +1,4 @@
-extends Node
+class_name CombatManager extends Node
 
 var player1
 var player2
