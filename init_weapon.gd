@@ -1,7 +1,6 @@
 extends Node2D
 
 @export var WEAPON_TYPE: Weapons
-
 @onready var weapon_sprite: Sprite2D = $WeaponSprite
 
 func _ready() -> void:
