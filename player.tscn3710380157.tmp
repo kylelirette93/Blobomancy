@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=3 uid="uid://bwcss4je86pns"]
+
+[ext_resource type="Script" uid="uid://c28fehqol7w0k" path="res://player_controller.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://dex2g5xreiyea" path="res://icon.svg" id="2_i3pqv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
+size = Vector2(60, 59)
+
+[sub_resource type="GDScript" id="GDScript_onrkg"]
+script/source = "class_name PlayerInput extends Node
+
+@export var character: CharacterBody2D
+@export var actions: PlayerInputActions
+
+func _physics_process(delta: float) -> void:
+	character.direction = Input.get_action_strength(\"move_left\")
+"
+
+[sub_resource type="GDScript" id="GDScript_i3pqv"]
+script/source = "class_name PlayerInputActions 
+extends Resource
+
+@export var left : StringName = \"move_left\"
+@export var right: StringName = \"move_right\"
+"
+
+[sub_resource type="Resource" id="Resource_hqtel"]
+script = SubResource("GDScript_i3pqv")
+left = &"move_left"
+right = &"move_right"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
+size = Vector2(1209, 24)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+script = ExtResource("1_onrkg")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+position = Vector2(524, 553)
+scale = Vector2(0.476563, 0.460938)
+texture = ExtResource("2_i3pqv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(525, 553.5)
+shape = SubResource("RectangleShape2D_i3pqv")
+
+[node name="PlayerInput" type="Node" parent="Player" node_paths=PackedStringArray("character")]
+script = SubResource("GDScript_onrkg")
+character = NodePath("..")
+actions = SubResource("Resource_hqtel")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(578, 639)
+scale = Vector2(9.5, 0.226563)
+texture = ExtResource("2_i3pqv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(572.5, 639)
+shape = SubResource("RectangleShape2D_onrkg")
