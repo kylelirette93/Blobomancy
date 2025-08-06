@@ -1,29 +1,23 @@
-[gd_scene load_steps=6 format=3 uid="uid://dhhj5p5frno1v"]
+[gd_scene load_steps=11 format=3 uid="uid://dhhj5p5frno1v"]
 
 [ext_resource type="Script" uid="uid://8xhnismmwc6j" path="res://scenes/main_menu.gd" id="1_0ykhv"]
 [ext_resource type="FontFile" uid="uid://bounawk87yb7q" path="res://04B_30__.TTF" id="1_yqorp"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yqorp"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ow34m"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yqorp"]
-bg_color = Color(0.666569, 0.666569, 0.666569, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-shadow_color = Color(0, 0, 0, 0.317647)
-shadow_size = 5
-shadow_offset = Vector2(0, 3.41)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l72w3"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ukcvp"]
-bg_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-shadow_color = Color(0, 0, 0, 0.317647)
-shadow_size = 5
-shadow_offset = Vector2(0, 3.41)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_826wr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ucygd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mipys"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8a8k8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2wh52"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0ykhv"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -33,6 +27,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0ykhv")
+tween_intensity = 1.2
+tween_duration = 0.4
 
 [node name="Label_Title" type="Label" parent="."]
 layout_mode = 1
@@ -72,68 +68,73 @@ theme_override_constants/separation = 25
 [node name="ButtonBattle" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0.494118, 0.737255, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.494118, 0.737255, 1)
+theme_override_colors/font_hover_color = Color(0, 0.494118, 0.737255, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0.67451, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0.494118, 0.737255, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.494118, 0.737255, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("1_yqorp")
 theme_override_font_sizes/font_size = 42
-theme_override_styles/focus = SubResource("StyleBoxEmpty_yqorp")
-theme_override_styles/hover = SubResource("StyleBoxFlat_yqorp")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_ukcvp")
-theme_override_styles/normal = SubResource("StyleBoxFlat_ukcvp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ow34m")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_l72w3")
 text = "Battle"
 
 [node name="ButtonOptions" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0.494118, 0.737255, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.494118, 0.737255, 1)
+theme_override_colors/font_hover_color = Color(0, 0.494118, 0.737255, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0.67451, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0.494118, 0.737255, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.494118, 0.737255, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("1_yqorp")
 theme_override_font_sizes/font_size = 42
-theme_override_styles/focus = SubResource("StyleBoxEmpty_yqorp")
-theme_override_styles/hover = SubResource("StyleBoxFlat_yqorp")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_ukcvp")
-theme_override_styles/normal = SubResource("StyleBoxFlat_ukcvp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_826wr")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ucygd")
 text = "Options"
 
 [node name="ButtonCredits" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0.494118, 0.737255, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.494118, 0.737255, 1)
+theme_override_colors/font_hover_color = Color(0, 0.494118, 0.737255, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0.67451, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0.494118, 0.737255, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.494118, 0.737255, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("1_yqorp")
 theme_override_font_sizes/font_size = 42
-theme_override_styles/focus = SubResource("StyleBoxEmpty_yqorp")
-theme_override_styles/hover = SubResource("StyleBoxFlat_yqorp")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_ukcvp")
-theme_override_styles/normal = SubResource("StyleBoxFlat_ukcvp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mipys")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8a8k8")
 text = "Credits
 "
 
 [node name="ButtonExit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.494118, 0.737255, 1)
+theme_override_colors/font_hover_color = Color(3.08037e-06, 0.492171, 0.736306, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0.67451, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0.494118, 0.737255, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.494118, 0.737255, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("1_yqorp")
 theme_override_font_sizes/font_size = 42
-theme_override_styles/focus = SubResource("StyleBoxEmpty_yqorp")
-theme_override_styles/hover = SubResource("StyleBoxFlat_yqorp")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_ukcvp")
-theme_override_styles/normal = SubResource("StyleBoxFlat_ukcvp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_2wh52")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0ykhv")
 text = "Exit Game
 "
+expand_icon = true
 
 [connection signal="pressed" from="VBoxContainer/ButtonBattle" to="." method="_on_button_battle_pressed"]
 [connection signal="pressed" from="VBoxContainer/ButtonOptions" to="." method="_on_button_options_pressed"]
